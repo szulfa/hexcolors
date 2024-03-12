@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hexcolors</title>
+    <style>
+        .container{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+        .hexcolors{
+            text-align: center;
+        }
+        h1{
+            animation:colorchange 5s infinite alternate;
+        }
+        h2{
+            margin-top: 15%;
+        }
+        @keyframes colorchange {
+            0%{
+                color:indigo;
+            }
+            20%{
+                color:pink;
+            }
+            40%{
+                color:skyblue;
+            }
+            60%{
+                color:orangered;
+            }
+            100%{
+                color:magenta;
+            }
+            
+        }
+        button{
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hexcolors">
+            <h1>click 👇 to check the hex code of the background color</h1>
+            <h2>the hex code is #<span id="hex_code">00000</span></h2>
+            <button onCLick="changeColor()">Click ME!</button>
+        </div>
+    </div>
+    <script src="hex.js"></script>
+</body>
+</html>
